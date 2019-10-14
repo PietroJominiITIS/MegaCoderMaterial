@@ -1,0 +1,10 @@
+<div class="dir">
+    <div>{{dir}}</div>
+</div>
+{{#each data as |els|}}
+    {{#if els.isDirectory}}
+        <li><a href="/?path={{els.path}}">&#128193; {{els.name}}</a></li>
+    {{else}}
+        <li><a href="/{{els.path}}">{{els.name}}</a></li>
+    {{/if}}
+{{/each}}
